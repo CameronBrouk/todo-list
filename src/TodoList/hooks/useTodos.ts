@@ -8,6 +8,13 @@ export const useTodos = (defaultValue: Todo[]) => {
     defaultValue,
   )
 
+  const getTodo = (id: string) =>
+    todoList.reduce((desiredTodo, currentTodo) => {
+      if (desiredTodo) return desiredTodo // if the todo has been found, return accumulater
+      if (id === currentTodo.id) return currentTodo // if currentTodo is the todo we want, set accumulater
+      return null // if we haven't found tod and current Todo is not the desired todo, return null
+    }, {} as Todo | null)
+
   const removeTodo = (id: string) => {
     setTodoList(prevList => prevList.filter(todo => todo.id !== id))
   }
@@ -16,10 +23,7 @@ export const useTodos = (defaultValue: Todo[]) => {
     setTodoList(prevList => [...prevList, { id: createId(), ...todo }])
   }
 
-  const updateTodo = (
-    id: string,
-    newTodo: Partial<Omit<Todo, 'id' | 'completed'>>,
-  ) => {
+  const updateTodo = (id: string, newTodo: Partial<Omit<Todo, 'id'>>) => {
     setTodoList(prevList =>
       prevList.map(todo => {
         if (todo.id === id) return { ...todo, ...newTodo }
@@ -32,5 +36,5 @@ export const useTodos = (defaultValue: Todo[]) => {
     setTodoList(_ => [])
   }
 
-  return { todoList, removeTodo, createTodo, updateTodo, clearTodos }
+  return { todoList, removeTodo, createTodo, updateTodo, clearTodos, getTodo }
 }
