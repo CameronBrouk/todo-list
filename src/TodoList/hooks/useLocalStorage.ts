@@ -1,16 +1,5 @@
 import { useEffect, useState } from 'react'
-
-const getFromLocalStorage = async <T>(key: string, defaultValue: T) => {
-  await null
-  const value = window.localStorage.getItem(key)
-  if (!value) return defaultValue
-  return JSON.parse(value)
-}
-
-const setInLocalStorage = async <T>(key: string, value: T) => {
-  await null
-  window.localStorage.setItem(key, JSON.stringify(value))
-}
+import { getFromLocalStorage, setInLocalStorage } from '../todoList.helpers'
 
 export const useLocalStorage = <T>(key: string, defaultValue: T) => {
   const [storedValue, setStoredValue] = useState(defaultValue)
