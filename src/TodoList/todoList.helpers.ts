@@ -1,3 +1,5 @@
+// NOTE: While remote, this has a chance of creating duplicate IDS.
+//       I would never use this in a production application.
 export const createId = () => Math.random().toString(16).slice(2)
 
 export const getFromLocalStorage = async <T>(key: string, defaultValue: T) => {
