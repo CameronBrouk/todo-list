@@ -24,3 +24,16 @@ header {
   padding: 0.5em;
   margin: 0.2em;
 }
+
+.todo-action-buttons {
+  margin-top: 10px;
+  display: flex;
+}
+
+.create-modal {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2em;
+}
