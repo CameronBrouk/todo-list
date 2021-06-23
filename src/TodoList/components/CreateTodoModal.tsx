@@ -47,7 +47,7 @@ export const CreateTodoModal = (props: Props) => {
             }
           />
 
-          <div>
+          <div className='create-todo'>
             <Button type='submit' variant='contained' color='primary'>
               Create Todo
             </Button>
