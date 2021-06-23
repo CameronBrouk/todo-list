@@ -1,5 +1,5 @@
-import { Button, TextField, Modal } from '@material-ui/core'
 import React, { useState } from 'react'
+import { Button, TextField } from '@material-ui/core'
 import { useTodos } from '../hooks/useTodos'
 import { searchObjArray } from '../todoList.helpers'
 import { CreateTodoModal } from './CreateTodoModal'

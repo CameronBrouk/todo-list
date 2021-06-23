@@ -1,8 +1,7 @@
 import React from 'react'
 import { Todo } from '../todoList.types'
-import { Checkbox, IconButton, Icon } from '@material-ui/core'
+import { Checkbox, IconButton } from '@material-ui/core'
 import CancelIcon from '@material-ui/icons/Cancel'
-import { updateTypePredicateNodeWithModifier } from 'typescript'
 
 type Props = {
   todo: Todo
