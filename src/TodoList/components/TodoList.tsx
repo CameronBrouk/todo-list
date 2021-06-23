@@ -16,8 +16,9 @@ export const TodoList = () => {
         name='search'
         autoComplete='off'
         autoFocus
+        disabled={todoList.length === 0}
         color='primary'
-        label='Search Todos'
+        label={todoList.length === 0 ? 'No Todos To Search' : 'Search Todos'}
         onChange={({ target }) => setSearchTerm(target.value)}
       />
 
