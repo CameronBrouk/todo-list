@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, TextField } from '@material-ui/core'
 import { useTodos } from '../hooks/useTodos'
-import { searchObjArray } from '../todoList.helpers'
+import { filterTodos } from '../todoList.helpers'
 import { CreateTodoModal } from './CreateTodoModal'
 import { TodoItem } from './TodoItem'
 
@@ -23,7 +23,7 @@ export const TodoList = () => {
       />
 
       <div className='todos'>
-        {searchObjArray(todoList, searchTerm).map(todo => (
+        {filterTodos(todoList, searchTerm).map(todo => (
           <TodoItem
             todo={todo}
             removeTodo={removeTodo}
