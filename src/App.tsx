@@ -5,8 +5,8 @@ import { TodoList } from './TodoList/components/TodoList'
 function App() {
   return (
     <div>
-      <header>
-        <h1>Drive Social Media Interview - TODO App</h1>
+      <header className='app-header'>
+        <h1>Todo App</h1>
       </header>
 
       <Container maxWidth='sm'>
