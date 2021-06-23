@@ -26,9 +26,9 @@ export const CreateTodoModal = (props: Props) => {
     <Modal
       open={props.isOpen}
       onClose={props.onClose}
-      aria-labelledby='simple-modal-title'
-      aria-describedby='simple-modal-description'>
-      <Container maxWidth='sm'>
+      aria-labelledby='create-todo-modal'
+      aria-describedby='create-todo-modal'>
+      <Container maxWidth='xs'>
         <form className='create-modal' onSubmit={onSubmit}>
           <h1>Create a Todo Item</h1>
 
@@ -36,6 +36,7 @@ export const CreateTodoModal = (props: Props) => {
             name='title'
             label='Todo'
             autoComplete='off'
+            autoFocus
             placeholder='describe your todo'
             required
             onChange={e =>
@@ -46,7 +47,11 @@ export const CreateTodoModal = (props: Props) => {
             }
           />
 
-          <Button type='submit'>Create Todo</Button>
+          <div>
+            <Button type='submit' variant='contained' color='primary'>
+              Create Todo
+            </Button>
+          </div>
         </form>
       </Container>
     </Modal>
