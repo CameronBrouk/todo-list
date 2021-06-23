@@ -1,11 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: #f9fafb;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
 }
 
-header {
-  height: 10vh;
+.todos {
+  margin: 30px 0;
+}
+
+.app-header {
+  height: 6vh;
+  padding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,21 +19,35 @@ header {
 }
 
 .todo-list {
-  padding: 1em;
+  margin-top: 10px;
+  padding: 0 1em 1em 1em;
   display: flex;
   flex-direction: column;
 }
 
 .todo-item {
-  box-shadow: 0 1.8px 1.1px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0px 8.3px rgba(0, 0, 0, 0.16), 0 0px 66px rgba(0, 0, 0, 0.08);
+
+  border-radius: 3px;
   background: white;
-  padding: 0.5em;
-  margin: 0.2em;
+  margin: 8px 0px;
+  display: flex;
+}
+
+.search-todos {
+  margin-bottom: 10px;
+}
+
+.remove-icon {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .todo-action-buttons {
   margin-top: 10px;
   display: flex;
+  justify-content: space-between;
 }
 
 .create-modal {
